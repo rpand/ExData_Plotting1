@@ -1,9 +1,11 @@
 source("./ExData_Plotting1/DataPrep.R")
 
 plot4 <- function(data=NULL) {
+    #if data is not loaded load it
     if(is.null(data))
         data <- load_data()
     
+    #create png file
     png("./ExData_Plotting1/plot4.png", width=400, height=400)
     
     par(mfrow=c(2,2))

@@ -1,9 +1,11 @@
 source("./ExData_Plotting1/DataPrep.R")
 
 plot3 <- function(data=NULL) {
+    #if data is not loaded load it
     if(is.null(data))
         data <- load_data()
     
+    #create png file
     png("./ExData_Plotting1/plot3.png", width=400, height=400)
     
     plot(data$Time, data$Sub_metering_1, type="l", col="black",
